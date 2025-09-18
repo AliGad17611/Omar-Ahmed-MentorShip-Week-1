@@ -255,6 +255,12 @@ graph TD
 - `path: ^1.9.0` - Path manipulation utilities
 - `collection: ^1.18.0` - Enhanced collection operations
 
+## 🎯 Object-Oriented Design Principles
+
+The Smart Ahwa Manager exemplifies core Object-Oriented principles from "The Object-Oriented Thought Process," demonstrating how proper abstraction, encapsulation, inheritance, and polymorphism create maintainable, scalable software. **Abstraction** is achieved through well-defined interfaces like `Service`, `Drink`, and various I/O contracts that hide implementation complexity while exposing only essential operations—allowing the CLI layer to interact with business logic without knowing internal details. **Encapsulation** is evident in the `Order` class, which protects its internal state through private fields and controlled access methods, ensuring data integrity while providing a clean public interface. The **modular architecture** separates concerns across distinct layers (CLI, Services, Models, Interfaces), enabling independent development, testing, and modification of components without affecting the entire system.
+
+**Inheritance and Polymorphism** shine through the `Drink` hierarchy, where `Shai`, `TurkishCoffee`, and `HibiscusTea` inherit from the abstract `Drink` class, allowing the system to treat all beverages uniformly while maintaining their unique characteristics—this polymorphic behavior enables easy menu expansion without modifying existing code. The **Command Pattern** implementation through the `Service` interface demonstrates how object-oriented thinking transforms user actions into executable objects, making the system highly extensible. These principles matter critically in this context because they enable the coffee house management system to evolve—new drink types can be added without breaking existing functionality, new services can be integrated seamlessly, and the CLI can be replaced with a GUI without touching business logic. This design reflects the object-oriented mindset of modeling real-world entities (orders, drinks, services) as software objects with clear responsibilities, relationships, and behaviors, resulting in code that mirrors the problem domain and remains comprehensible to both developers and stakeholders.
+
 ---
 
 **Built with ❤️ using Dart and Clean Architecture principles**
